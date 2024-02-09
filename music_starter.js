@@ -7,13 +7,15 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
   strokeWeight(9);
   stroke(bass, 80, 80); // Use the 'drum' variable for the hue
   
-  var drumMap = map(bass, 0, 100, 30, 90); // Map 'drum' to a new range
-  var LengthOfLine = 100;
-  var LineStart = 100;
-  var lineEnd = LineStart + LengthOfLine; // Fixed variable name
-  
-  for (var i = 1; i <= 5; i++) {
-    var LineStep = i * 10; // Corrected to 'i * 10'
-    line(LineStart, LineStep, lineEnd, LineStep); // Fixed 'lineStep' to 'LineStep'
-  }
+
+}
+let triangleHeight = map(bass, 40, 100, 200, 550, true);
+fill(117,200,174); // teal
+for(let i=0; i<3; i++) {
+  let cur_x = map(i, 0, 4, 0, width);
+  let next_x = map(i+1, 0, 3, 0, width);
+  let mid_x = (cur_x + next_x) / 2.0;
+  //let cur_y = 4 * height / 5;
+  let cur_y = height 
+  triangle(cur_x, cur_y, mid_x, cur_y - triangleHeight, next_x, cur_y);
 }
