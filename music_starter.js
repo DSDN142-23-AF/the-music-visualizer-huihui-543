@@ -3,9 +3,9 @@
 function draw_one_frame(words, vocal, drum, bass, other, counter) {
   
   let waveHeight = map(vocal, 40, 100, 200, 550, true);
-  fill(400, 50, 40); // red
+  fill(250, 80, 40); // red
   for(let i = 0; i < width; i += 10) {
-    let y = height / 3+ sin(i * 1+ millis() * 2) * waveHeight;
+    let y = height / 2.5+ sin(i * 1+ millis() * 50) * waveHeight;
     ellipse(i, y, 10, 10);
   }
 
@@ -14,7 +14,7 @@ let ovalSize = map(other, 10, 20, 60, 250, true);
 fill(255, 255, 0); // yellow 
 ellipse(width/2.1, ovalPlace, ovalSize);
 
-stroke(255, 105, 0); // orange
+stroke(400, 50, 0); // orange
 line(width/2 - ovalSize, ovalPlace, width/2 - ovalSize - 100, ovalPlace); // left
 line(width/2 + ovalSize, ovalPlace, width/2 + ovalSize + 100, ovalPlace); // rioght
 line(width/2, ovalPlace - ovalSize, width/2, ovalPlace - ovalSize - 50); // top
