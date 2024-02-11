@@ -1,9 +1,9 @@
 
 // vocal, drum, bass, and other are volumes ranging from 0 to 100
 function draw_one_frame(words, vocal, drum, bass, other, counter) {
-  let stripeWidth = map(other, 0, 90, 0, 7, true);
+  let stripeWidth = map(other, 0, 90, 0, 10, true);
 
-  fill('blue'); // 
+  fill(30,100,300); // 
   
   for (let i = 0; i < height; i += stripeWidth * 2) { // multiply by 2 to alternate stripes
     beginShape();
