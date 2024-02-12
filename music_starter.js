@@ -2,7 +2,7 @@
 
 let firstRun = true
 
-  let pic = [] // this was a capital L 
+  let pic = [] // 
 function draw_one_frame(words, vocal, drum, bass, other) { // words was missing here
 if (firstRun) {
 rectMode (CENTER);
@@ -14,22 +14,21 @@ firstRun = false
 
 }
 
-var VocalFrame =int(map(vocal, 0,100, 0,2));
+var VocalFrame =int(map(bass, 0,200, 0, 5));
 console. log (VocalFrame);
 push ();
-scale (0.1); // couldnt see the image so made it  smalller 
-image(pic[VocalFrame], width/2, height/2) // this was image(pic|VocalFramel, width/2, height/2) updated the variable name and used square brakets
+scale (0.2); 
+image(pic[VocalFrame], width/8, height/1) // this was image(pic|VocalFramel, width/2, height/2) updated the variable name and used square brakets
 pop ();
 
- // there was a close bracket here, I moved it to line 60
-
+ 
 
   let dotHeight = map(vocal, 40, 100, 200, 550, true);
   fill(250, 55, 40); // red orange
 
   for(let i = 0; i < width; i += 10) {    
     let y = height / 2.5+ sin(i * 1+ millis() * 50) * dotHeight; // learnt from a tuakana
-    ellipse(i, y, 10, 20);
+    ellipse(i, y, 10, 15);
 
 }
 
@@ -57,5 +56,5 @@ for (let i = 0; i < height; i += stripeWidth * 2) { // multiply by 2 to alternat
 }
 
 
-} // moved the close bracket here
+} 
 
